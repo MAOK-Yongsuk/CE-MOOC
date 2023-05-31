@@ -295,7 +295,7 @@ async def delete_course(refcode: str):
     course_system.delete_course(refcode)
 
 
-@app.get("/courses/search_by_name", tags=["Course API"])
+@app.get("/courses/search/", tags=["Course API"])
 async def search_name(data: str):
     return course_system.search_by_name(data)
 
