@@ -109,8 +109,7 @@ course_system.add_material('SOFT001', 2, chap3_mat)
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000",  # React/Next.js development server
-    # Add any other origins that need to access the API
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
@@ -123,7 +122,7 @@ app.add_middleware(
 
 @app.get("/", tags=['root'])
 async def root():
-    return {"Welcome": "Hello OOP"}
+    return {"Welcome": "Hello CE-MOOC"}
 
 # -------------------------------------------- User API -------------------------------------------- #
 # register

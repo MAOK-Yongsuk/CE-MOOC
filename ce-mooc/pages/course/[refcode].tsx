@@ -8,7 +8,6 @@ interface Course {
     _Courses__title: string;
     _Courses__desc: string;
     _Courses__teacher: string;
-    // Include other properties of the course that you want to display
 }
 
 const CourseDetails = () => {
@@ -35,6 +34,7 @@ const CourseDetails = () => {
             <p>{course._Courses__teacher}</p>
             {/* Display other properties of the course */}
         </div>
+        
     );
 };
 
