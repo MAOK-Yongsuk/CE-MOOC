@@ -9,6 +9,8 @@ const Header = () => {
                <h2>
                     <Link href="/">CE MOOC</Link>
                     <Link href="/course">All Courses</Link>
+                    <Link href="/register">Register</Link>
+                    <Link href="/login">Login</Link>
                     {/* Add more links as needed */}
                </h2>               
             </nav>

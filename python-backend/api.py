@@ -108,9 +108,7 @@ course_system.add_material('SOFT001', 2, chap3_mat)
 # ------------------------------- API -----------------------------------#
 app = FastAPI()
 
-origins = [
-    "http://localhost:3000",
-]
+origins = ["http://localhost:3000"]
 
 app.add_middleware(
     CORSMiddleware,
