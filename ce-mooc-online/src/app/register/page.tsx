@@ -1,7 +1,9 @@
-// pages/register.tsx
+// pages/register/page.tsx
+
+"use client"
 import { useState } from 'react';
 
-const Register = () => {
+export default function Register() {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -17,6 +19,8 @@ const Register = () => {
     teacher_dept: '',
   });
 
+  const [isRegistered, setIsRegistered] = useState(false);
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
@@ -28,9 +32,16 @@ const Register = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
-    const data = await response.json();
-    console.log(data);
+
+    // If the registration is successful, set isRegistered to true
+    if (response.ok) {
+      setIsRegistered(true);
+    }
   };
+
+  if (isRegistered) {
+    return <p>Registration Complete!</p>
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -118,4 +129,3 @@ const Register = () => {
   );
 };
 
-export default Register;

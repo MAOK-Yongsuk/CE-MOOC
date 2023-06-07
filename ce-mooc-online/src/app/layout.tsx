@@ -19,6 +19,8 @@ export default function RootLayout({
       <body className={inter.className}>     
         <h1>
           <Link href="/"> CE-MOOC </Link>
+          <Link href="/register"> Register </Link>
+          <Link href="/login"> Login </Link>
         </h1>  
         {children}
       </body>
